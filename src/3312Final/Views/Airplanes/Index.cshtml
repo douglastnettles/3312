@@ -1,0 +1,111 @@
+@model IEnumerable<_3312Final.Models.Airplane>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<br/>
+<br/>
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create</a>
+</p>
+<div class="table-striped">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Pilot ID Number
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Altitude)
+                </th>
+                <th>
+                    Flap Setting
+                </th>
+                <th>
+                    Flap Setting Land
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Ice)
+                </th>
+                <th>
+                    Outside Air Temperature
+                </th>
+                <th>
+                    Runway Direction
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Snow)
+                </th>
+                <th>
+                    Trip Distance
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Weight)
+                </th>
+                <th>
+                    Wind Direction
+                </th>
+                <th>
+                    Wind Speed
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Headwind)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pilot)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Altitude)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FlapSetting)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FlapSettingLand)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OutsideAirTemp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RunwayDirection)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Snow)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TripDistance)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Weight)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WindDirection)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WindSpeed)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Headwind)
+                </td>
+                <td>
+
+                    <a asp-action="Details" class="btn btn-primary" asp-route-id="@item.ID">View Your Results</a>
+                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>
+
+</div>

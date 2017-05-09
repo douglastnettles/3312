@@ -1,0 +1,135 @@
+@model _3312Final.Models.Airplane
+
+@{
+    ViewData["Title"] = "Card";
+}
+
+<h2>Results</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Pilot ID Number
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pilot)
+        </dd>
+        <dt>
+            Altitude
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Altitude)
+        </dd>
+        <dt>
+        <dt>
+            Flap Setting (Takeoff)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FlapSetting)
+        </dd>
+        <dt>
+            Flap Setting (Land)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FlapSettingLand)
+        </dd>
+        <dt>
+            Outside Air Temp (Celcius)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OutsideAirTemp)
+        </dd>
+        <dt>
+            Runway Direction (in degrees)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RunwayDirection)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Snow)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Snow)
+        </dd>
+        <dt>
+            Trip Distance
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TripDistance)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Weight)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Weight)
+        </dd>
+        <dt>
+            Wind Direction
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WindDirection)
+        </dd>
+        <dt>
+            Wind Speed
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WindSpeed)
+        </dd>
+        <dt>
+            Minimum Takeoff Speed
+        </dt>
+        <dd>
+            200
+        </dd>
+        <dt>
+            Rotation Speed
+        </dt>
+        <dd>
+            250            
+        </dd>
+        <dt>
+            Maintainable Speed
+            (even if loss of engine)
+        </dt>
+        <dd>
+            220
+        </dd>
+        <dt>
+            Flap Retraction Init Speed
+        </dt>
+        <dd>
+            300
+        </dd>
+        <dt>
+            Flap Retraction Clean Speed
+        </dt>
+        <dd>
+            350
+        </dd>
+        <dt>
+            Normal Final Approach Speed
+        </dt>
+        <dd>
+            300
+        </dd>
+        <dt>
+            Minimum Safe Speed
+        </dt>
+        <dd>
+            150
+        </dd>
+        <dt>
+            Go Around Speed
+        </dt>
+        <dd>
+            190
+        </dd>
+    </dl>
+</div>
+<br />
+<div>
+    <a asp-action="Details" asp-route-id="@Model.ID" class="btn btn-primary">Back to Details</a> |
+    <a asp-action="Edit" asp-route-id="@Model.ID" class="btn btn-primary">Edit</a> |
+    <a asp-action="Index" class="btn btn-primary">Back to List</a>
+</div>
